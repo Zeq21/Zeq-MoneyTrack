@@ -1,0 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+.header {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #111827;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 36px;
+  color: #38bdf8;
+}
+
+.header p {
+  margin-top: 10px;
+  color: #cbd5e1;
+}
+
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 30px auto;
+}
+
+.summary {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.summary-card {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #334155;
+}
+
+.summary-card p {
+  margin: 0 0 10px;
+  color: #cbd5e1;
+}
+
+.summary-card strong {
+  font-size: 24px;
+}
+
+.balance {
+  border-color: #38bdf8;
+}
+
+.form-section,
+.transactions-section {
+  background-color: #1e293b;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  border: 1px solid #334155;
+}
+
+.form-section h2,
+.transactions-section h2 {
+  margin-top: 0;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr auto;
+  gap: 10px;
+}
+
+input,
+select,
+button {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+}
+
+input,
+select {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border: 1px solid #334155;
+}
+
+button {
+  background-color: #38bdf8;
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0ea5e9;
+}
+
+#transactions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0f172a;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  border-left: 5px solid;
+}
+
+.transaction-item.income {
+  border-color: #22c55e;
+}
+
+.transaction-item.expense {
+  border-color: #ef4444;
+}
+
+.transaction-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.transaction-info span {
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.transaction-value.income {
+  color: #22c55e;
+}
+
+.transaction-value.expense {
+  color: #ef4444;
+}
+
+@media (max-width: 700px) {
+  .summary {
+    grid-template-columns: 1fr;
+  }
+
+  form {
+    grid-template-columns: 1fr;
+  }
+}
