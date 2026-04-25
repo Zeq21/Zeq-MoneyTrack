@@ -18,7 +18,11 @@ body {
 .header h1 {
   margin: 0;
   font-size: 36px;
-  color: #38bdf8;
+  color: #f8fafc;
+  text-shadow:
+    0 0 6px rgba(248, 250, 252, 0.65),
+    0 0 12px rgba(56, 189, 248, 0.35),
+    0 0 22px rgba(57, 255, 20, 0.25);
 }
 
 .header p {
@@ -44,19 +48,39 @@ body {
   padding: 20px;
   border-radius: 12px;
   border: 1px solid #334155;
+  cursor: pointer;
+  box-shadow: none;
+  transition:
+    border-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.summary-card:hover {
+  border-color: #39ff14;
+  box-shadow: 0 0 18px rgba(57, 255, 20, 0.38);
+  transform: translateY(-4px);
 }
 
 .summary-card p {
   margin: 0 0 10px;
   color: #cbd5e1;
+  transition: color 0.3s ease;
 }
 
 .summary-card strong {
   font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.summary-card:hover p,
+.summary-card:hover strong {
+  color: #39ff14;
 }
 
 .balance {
-  border-color: #38bdf8;
+  border-color: #334155;
+  box-shadow: none;
 }
 
 .form-section,
@@ -95,15 +119,28 @@ select {
   border: 1px solid #334155;
 }
 
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #39ff14;
+  box-shadow: 0 0 8px rgba(57, 255, 20, 0.25);
+}
+
 button {
   background-color: #38bdf8;
   color: #0f172a;
   font-weight: bold;
   cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
 }
 
 button:hover {
-  background-color: #0ea5e9;
+  background-color: #39ff14;
+  box-shadow: 0 0 14px rgba(57, 255, 20, 0.35);
+  transform: translateY(-2px);
 }
 
 #transactions-list {
